@@ -1,0 +1,72 @@
+ setenv PATH /home/eqtuabe/tools/bin:/home/eqtuabe/bin:/proj/ltelidet/lts_bin/x86_64:/home/ltelidt/dailytest/bin:/app/meld/1.6.0/LMWP3/bin:$PATH
+xrdb ~/.Xresources
+alias ls 'ls --color'
+alias cdcell 'cd /local/repo/eqtuabe/lrat/vobs/erbs/node/lm/cellLmU/build/'
+alias cdcentral 'cd /local/repo/eqtuabe/lrat/vobs/erbs/node/lm/centralLmU/build/'
+alias atrep "atest_report -html report.html"
+alias lsco "ct lsco -cview -me -short -recurse"
+alias buildcell "cdcellbuild;buildme"
+alias buildcentral "cdcentralbuild;buildme"
+alias gt 'gnome-terminal -t "$PWD"'
+alias rsa rsarte_rac_oam
+alias cderbs 'cd /repo/eqtuabe/lrat/vobs/erbs'
+alias sg 'source /repo/eqtuabe/lrat/gitenv.csh'
+alias ff '~/ltetools/flowfox/flowfox'
+alias bdftcell 'buildme --cflags="-DCMCC_FAST_TRACK_FEATURE" --product_number CXC1725191/89'
+alias bdftcentral 'buildme --cflags="-DCMCC_FAST_TRACK_FEATURE" --product_number CXC1725190/89'
+
+#setenv LSCOLORS ExGxFxdxCxegedabagExEx
+#setenv CLICOLOR yes
+#setenv TERM xterm-color 
+
+# grep: highlight the keyword
+setenv GREP_OPTIONS --color=auto
+
+# e = 033
+set prompt="%{\e[1;32m%}%m %{\e[1;33m%}[%~] %{\e[0m%}% "
+
+# Add these lines to your ~/.cshrc.mine file on the linux grace machines...
+# don't worry too much about what they mean.
+
+# Colors!
+# set     red="%{\033[1;31m%}"
+# set   green="%{\033[0;32m%}"
+# set  yellow="%{\033[1;33m%}"
+# set    blue="%{\033[1;34m%}"
+# set magenta="%{\033[1;35m%}"
+# set    cyan="%{\033[1;36m%}"
+# set   white="%{\033[0;37m%}"
+# set     end="%{\033[0m%}" # This is needed at the end... :(
+
+# Setting the actual prompt.  I made two separate versions for you to try, pick
+# whichever one you like better, and change the colors as you want.  Just don't
+# mess with the {end} guy in either line...  Comment out or delete the prompt you don't use.
+
+#set prompt="${green}%n${blue}@%m ${white}%~ ${green}%%${end} "
+#set prompt="[{green}%n{blue}@%m {white}%~ ]{end} "
+
+
+module add git
+module add kdiff3
+# module add meld
+# module add pygtk
+
+# Git color?
+setenv LESS '-M -I -R'
+
+setenv PAGER less
+setenv LESS "--ignore-case --quit-at-eof --LONG-PROMPT --squeeze-blank-lines --HILITE-UNREAD --search-skip-screen --RAW-CONTROL-CHARS"
+
+# Git Alias
+alias clone_repo '/proj/lterbsSwdi/lte_wh/x86_64-Linux2.6.16/ltetools/latest/bin/clone_repo'
+
+
+# tmp alias
+alias cdcc 'cd /local/repo/eqtuabe/lrat/vobs/erbs/rnh/cellBl/ctrlSwU/test/exe'
+alias cdmme 'cd /local/repo/eqtuabe/lrat/vobs/erbs/ueh/nwIfBl/mmeRegisterSwU/test/exe'
+alias cdrc 'cd /local/repo/eqtuabe/lrat/vobs/erbs/rnh/radioConfBl/cellRegisterSwU/test/exe'
+alias cdlrat 'cd /local/repo/eqtuabe/lrat'
+
+
+# and then in ~/.cshrc:
+alias precmd "source ~/bin/gitbranch.tcsh"

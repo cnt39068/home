@@ -1,0 +1,13 @@
+13:35:27: Tlist_Window_Toggle()
+13:35:27: Tlist_Window_Open()
+13:35:27: Tlist_Window_Create()
+13:35:27: Tlist_Buffer_Removed (/home/eqtuabe/.vim/plugin/-MiniBufExplorer-)
+13:35:27: Tlist_Window_Init()
+13:35:27: Tlist_Buffer_Removed (/home/eqtuabe/.vim/plugin/__Tag_List__)
+13:35:27: Tlist_Window_Refresh()
+13:35:27: Tlist_Window_Refresh_File (/home/eqtuabe/mg/tips/tips.txt)
+13:35:27: Tlist_Process_File (/home/eqtuabe/mg/tips/tips.txt, txt)
+13:35:27: Tlist_FileType_Init (txt)
+13:35:27: Tlist_Init_File (/home/eqtuabe/mg/tips/tips.txt)
+13:35:27: Cmd: ctags -f - --format=2 --excmd=pattern --fields=nks --sort=no --language-force=txt --txt-types=cft "/home/eqtuabe/mg/tips/tips.txt"
+13:37:46: Tlist_Post_Close_Cleanup()

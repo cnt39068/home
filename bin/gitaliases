@@ -1,0 +1,36 @@
+# git shortcuts
+alias gs 'git status'
+alias ga 'git add'
+alias gb 'git branch'
+alias gc 'git commit'
+alias gd 'git diff'
+alias go 'git checkout'
+alias gfp 'git fetch -p'
+#pretty git one line git log
+alias gh 'git log --pretty=tformat:"%h %ad | %s%d [%an]" --graph --date=short'
+#show only the file names changed in commit
+alias gsf 'git show --pretty="format:" --name-only'
+#run gitk
+alias gk 'gitk --all&'
+#show submodule
+alias gss 'cd $MY_GIT_TOP/;git submodule status;cd -'
+# submoduel update
+alias gsu 'cd $MY_GIT_TOP/;git submodule update;cd -'
+# go to tp/root level dir in git repo
+alias cdgt 'cd $MY_GIT_TOP/'
+alias grr '/proj/lterbsSwdi/lte_wh/x86_64-Linux2.6.16/ltetools/latest/bin/grr'
+# show what DAILYBUILD/UP baseline is the current branch/commit based on
+alias gsb 'git log --oneline | grep -E "DAILYBUILD|(Import.+CXP)" | head -n 1'
+# show commits I have in my branch that are not in dev
+alias gbv 'git merge-base origin/dev HEAD | tr -d "\n" | xargs -0 -I ancestor git log --oneline ancestor..HEAD'
+#show all git aliases
+alias gas 'alias|grep git'
+# clone repo script clones and prepares the repo for usage, so pretty much clone and go
+alias clone_repo '/proj/lterbsSwdi/lte_wh/x86_64-Linux2.6.16/ltetools/latest/bin/clone_repo'
+#clean all but the stuff the stuff that we would like preserved like .ccache, xmls catalog etc
+#clean -dxf will wipe everything requiring user to source gitenv again
+alias gclean 'pushd $MY_GIT_TOP > /dev/null && git submodule foreach --recursive 'git clean -xdf' && git clean -xdf -e .ccache -e .flex_dbg -e remap_catalog.xml && popd > /dev/null'
+alias rmwhitespace 'perl -lpi -e '\''s/\s+$//'\'''
+#use recommneded version of RSA RTE
+alias start_rsa_rte_eclipse '/proj/crbs/bbi/tools/eclipse/start_eclipse -rsarte_eecs_ver=$RSARTE_EECS_VER \!* &'
+alias plotziplog.pl '$MY_GIT_TOP/vobs/crbs/bbi/legacy/lpp/export/liblppgen/plotziplog.pl \!*'
