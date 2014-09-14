@@ -10,12 +10,12 @@
 #     . ${SCRIPTPATH}/scripts/bash_completion.d/${files}
 # done
 
-source git-prompt.sh
+source ~/bin/git-prompt.sh
 
 # SCRIPTSETUPPATH=${SCRIPTPATH}/scripts/setup
 
 # Get misc help functions
-source func.sh
+source ~/bin/func.sh
 
 # Misc setup
 # source ${SCRIPTSETUPPATH}/misc_setup $1 $2
