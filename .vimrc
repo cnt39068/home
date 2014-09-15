@@ -320,10 +320,10 @@ elseif (match(getcwd(), "inta-ssm") > -1)
   call LoadSsmTags()
 " elseif (match(getcwd(), "erbs") > -1)
 "   call LoadLteMtTags()
-elseif match(getcwd(), "linux") > -1
-  set tags=/home/willc/tags/linux-kernel/tags
-  cs add /home/willc/tags/linux-kernel/cscope.out
-  let g:LookupFile_TagExpr = '"/home/willc/tags/linux-kernel/filenametags"'
+elseif match(getcwd(), "linux-3.16.2") > -1
+  set tags=/local/tags/linux-3.16.2
+  cs add /local/tags/linux-3.16.2/cscope.out
+  let g:LookupFile_TagExpr = '"/local/tags/linux-3.16.2/filenametags"'
 elseif match($CLEARCASE_ROOT, "88.4.5") > -1
   " call LoadCmccFt8845()
 elseif match($CLEARCASE_ROOT, "19") > -1
