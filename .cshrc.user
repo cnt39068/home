@@ -70,3 +70,4 @@ alias cdlrat 'cd /local/repo/eqtuabe/lrat'
 
 # and then in ~/.cshrc:
 alias precmd "source ~/bin/gitbranch.tcsh"
+alias genlrat "gentags.sh /local/repo/eqtuabe/lrat /local/workspace/eqtuabe/tags"

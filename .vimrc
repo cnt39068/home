@@ -230,8 +230,8 @@ filetype plugin on
 
 " shortcuts to load the tags
 func! LoadDefaultTags()
-  set tags=./tags
-  cs add ./cscope.out
+  set tags=tags
+  cs add cscope.out
 "  let g:LookupFile_TagExpr = '"/git_store1/eqtuabe/tags/passport/filenametags"'
 endfunc
 
@@ -337,8 +337,8 @@ elseif match(getcwd(), "omf") > -1
 elseif match(getcwd(), "lrat") > -1
   call LoadLteLratTags()
 else
-  set tags=./tags
-  cs add ./cscope.out
+  set tags=tags
+  cs add cscope.out
   let g:LookupFile_TagExpr = '"./filenametags"'
 endif
 
