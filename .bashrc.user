@@ -1,1 +1,6 @@
+# git prompt
 source ~/bin/set-git-prompt.sh
+
+# set title with current path
+
+
